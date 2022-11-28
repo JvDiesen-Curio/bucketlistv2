@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
+import { BucketlistFormComponent } from './pages/bucketlist-form/bucketlist-form.component';
 import { BucketlistComponent } from './pages/bucketlist/bucketlist.component';
 
 const routes: Routes = [
@@ -14,12 +15,12 @@ const routes: Routes = [
       },
       {
         path: 'bucketlist', component: BucketlistComponent
+      },
+      {
+        path: 'bucketlist/edit', component: BucketlistFormComponent
       }
-
     ]
-
   }
-
 ];
 
 @NgModule({

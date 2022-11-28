@@ -17,9 +17,16 @@ export class BucketlistComponent implements OnInit {
 
 
   async ngOnInit(): Promise<void> {
-    this.bucketlistData = await this.bucketlistService.getBucketlists();
-    console.table(this.bucketlistData);
+    await this.get();
+  }
 
+  public async delete(id: string) {
+    this.bucketlistService.deleteBucketlist(id);
+    await this.get();
+  }
+
+  private async get() {
+    return this.bucketlistData = await this.bucketlistService.getBucketlists();
   }
 
 

@@ -1,7 +1,16 @@
 <p>bucketlist works!</p>
 
-<ul *ngIf="bucketlistData">
-    <div *ngFor="let bucketlist of bucketlistData">
-        {{bucketlist.title}}
-    </div>
-</ul>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Title</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tr *ngFor="let bucketlist of bucketlistData">
+        <td>{{bucketlist.id}}</td>
+        <td>{{bucketlist.title}}</td>
+        <td>Edit</td>
+        <td><button (click)="delete(bucketlist.id)">Delete</button> </td>
+    </tr>
+</table>
