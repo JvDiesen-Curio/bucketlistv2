@@ -29,5 +29,4 @@ export class BucketlistComponent implements OnInit {
     return this.bucketlistData = await this.bucketlistService.getBucketlists();
   }
 
-
 }

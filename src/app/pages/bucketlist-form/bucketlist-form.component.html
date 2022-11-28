@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form *ngIf="form" [formGroup]="form">
     <label for="">Input:</label>
     <input type="text" formControlName="title">
     <button (click)="save()">Save</button>
